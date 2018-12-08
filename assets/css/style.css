@@ -134,6 +134,7 @@ section{
     padding-top:50px;
     border-top:10px solid #4aaaa5;
     flex:none;
+    /* clear: both; */
 }
 
 p{
@@ -160,22 +161,40 @@ p{
 }
 
 #portfolio{
-    padding-bottom:60px;
+    padding-bottom:370px;
+    max-width: 910px;
 }
-
 
 #about{
     padding-bottom:40px;
 }
 
 .portfolioImg{
-    display:inline-block;
-    width: 274px;
-    height:206px;
-    padding-right:40px;
-    padding-bottom:40px;
+    /* display:inline-block; */
+    max-width: 100%;
+    width: 48%;
+    /* float: left; */
+    display: inline-block;
 }
 
+.portfolioImg img{
+    width:100%;
+}
+
+
+.portfolioImg:nth-of-type(2n+1){
+    padding-right: 20px;
+    float: left;
+}
+
+#portfolioBlock{
+    width: 100%;
+    display: block;
+    /* display: inline-block; */
+    max-width: 910px;
+    /* height: 100%; */
+    clear: both;
+}
 
 .contact-form{
     width:100%;
@@ -189,10 +208,14 @@ label{
 
 input{
     margin:5px 0px 15px 0px;
-    padding:10px 10px;
+    padding: 10px 0px 10px 5px;
+    padding-right:inherit;
     border:1px solid #ddd;
-    max-width:890px;
 }
+
+
+
+
 
 
 
@@ -224,13 +247,69 @@ textarea{
 
 
 @media screen and (max-width: 980px) {
-  0.
+
+    .contentWrapper,
+    .headerWrapper{
+        padding:0px 20px;
+   
+    }
+
+    section{
+        max-width:910px;
+    }
+
+
+    #aboutPic{
+        width:32%;
+    }
+
   }
 
 
 
 
+  @media screen and (min-width: 980px) {
+
+    .contentWrapper,
+    .headerWrapper{
+        padding:0px 0px;
+   
+    }
+
+    section{
+        max-width:910px;
+    }
+
+
+    #aboutPic{
+        width:32%;
+    }
+
+  }
+
+
+
 @media screen and (max-width: 768px) {
+
+    .contentWrapper,
+    .headerWrapper{
+        padding:0px 20px;
+   
+    }
+
+    nav ul{
+        text-align:center;
+        margin-right: 35px;
+     }
+
+     #aboutPic{
+        width:35%;
+        margin-top:5px;
+    }
+    
+    nav ul{
+        text-align:center;
+     }
 }
 
 
@@ -251,7 +330,7 @@ textarea{
     }
 
     section{
-        margin:25px;0
+        margin:25px;
     }
     #aboutPic{
         width:100%;
@@ -261,6 +340,41 @@ textarea{
     nav ul li{
         padding: 0px 10px 0px 5px;
     }
+
+    .portfolioImg{
+        display:inline-block;
+        width: 100%;
+        /* height:206px; */
+        padding-right:40px;
+        padding-bottom:0px;  
+    }
+    
+    .contentWrapper,
+    .headerWrapper{
+        padding:0px;
+   
+    }
+    
+    .portfolioImg img{
+        width:100%;
+    }
+
+
+    nav ul{
+        text-align:center;
+        margin-right: 0px;
+     }
+
+     #portfolio{
+        max-width: 659px;
+    }
+
+    nav{
+        padding-right: 0px;
+        margin-right:-10px;
+     }
+
+
 
   }
 
